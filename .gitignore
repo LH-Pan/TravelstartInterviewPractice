@@ -1,0 +1,10 @@
+### Storyboard ###
+xcuserdata/
+*.xcuserstate
+
+### CocoaPods ###
+Pods/
+
+### macOS ###
+# General
+.DS_Store
