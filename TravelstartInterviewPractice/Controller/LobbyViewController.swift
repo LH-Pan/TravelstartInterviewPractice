@@ -15,5 +15,47 @@ class LobbyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        
+        tableView.delegate = self
+        
+        tableView.dataSource = self
+        
+        tableView.custom_registerCellWithNib(
+            identifier: LobbyTableViewCell.identifier,
+            bundle: nil
+        )
+    }
+}
+
+extension LobbyViewController: UITableViewDelegate,
+                               UITableViewDataSource {
+    
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        
+        guard
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: LobbyTableViewCell.identifier,
+                for: indexPath
+            ) as? LobbyTableViewCell
+        else {
+            return UITableViewCell()
+        }
+        
+        return cell
     }
 }

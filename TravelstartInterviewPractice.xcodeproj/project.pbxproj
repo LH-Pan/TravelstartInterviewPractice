@@ -11,7 +11,7 @@
 		229A4D59236C152500029528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D58236C152500029528 /* AppDelegate.swift */; };
 		229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5A236C152500029528 /* SceneDelegate.swift */; };
 		229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5C236C152500029528 /* LobbyViewController.swift */; };
-		229A4D60236C152500029528 /* Lobby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229A4D5E236C152500029528 /* Lobby.storyboard */; };
+		229A4D60236C152500029528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229A4D5E236C152500029528 /* Main.storyboard */; };
 		229A4D62236C152600029528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229A4D61236C152600029528 /* Assets.xcassets */; };
 		229A4D65236C152600029528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229A4D63236C152600029528 /* LaunchScreen.storyboard */; };
 		229A4D70236C152600029528 /* TravelstartInterviewPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D6F236C152600029528 /* TravelstartInterviewPracticeTests.swift */; };
@@ -19,6 +19,7 @@
 		229A4D8A236D69DC00029528 /* LobbyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D89236D69DC00029528 /* LobbyTableViewCell.swift */; };
 		229A4D8D236D6B0500029528 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D8C236D6B0500029528 /* UITableView+Extension.swift */; };
 		229A4D8F236D6E7B00029528 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D8E236D6E7B00029528 /* UICollectionView+Extension.swift */; };
+		229A4D92236D7DA100029528 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D91236D7DA100029528 /* UIStoryboard+Extension.swift */; };
 		6542A1643E59C0D34D041563 /* Pods_TravelstartInterviewPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F091150183F52E27BDBAEEAC /* Pods_TravelstartInterviewPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +40,7 @@
 		229A4D58236C152500029528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		229A4D5A236C152500029528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		229A4D5C236C152500029528 /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
-		229A4D5F236C152500029528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Lobby.storyboard; sourceTree = "<group>"; };
+		229A4D5F236C152500029528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		229A4D61236C152600029528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		229A4D64236C152600029528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		229A4D66236C152600029528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		229A4D89236D69DC00029528 /* LobbyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyTableViewCell.swift; sourceTree = "<group>"; };
 		229A4D8C236D6B0500029528 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		229A4D8E236D6E7B00029528 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		229A4D91236D7DA100029528 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		2C8DC6B00345DD6B9EF28DD4 /* Pods_TravelstartInterviewPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelstartInterviewPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB5B266D354422109731D29 /* Pods-TravelstartInterviewPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartInterviewPractice.release.xcconfig"; path = "Target Support Files/Pods-TravelstartInterviewPractice/Pods-TravelstartInterviewPractice.release.xcconfig"; sourceTree = "<group>"; };
 		CBF6BA55B3181AFF80F3E657 /* Pods-TravelstartInterviewPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartInterviewPractice.debug.xcconfig"; path = "Target Support Files/Pods-TravelstartInterviewPractice/Pods-TravelstartInterviewPractice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +117,7 @@
 				229A4D84236D619A00029528 /* View */,
 				229A4D58236C152500029528 /* AppDelegate.swift */,
 				229A4D5A236C152500029528 /* SceneDelegate.swift */,
-				229A4D5E236C152500029528 /* Lobby.storyboard */,
+				229A4D5E236C152500029528 /* Main.storyboard */,
 				229A4D63236C152600029528 /* LaunchScreen.storyboard */,
 				229A4D66236C152600029528 /* Info.plist */,
 			);
@@ -177,6 +179,7 @@
 			children = (
 				229A4D8C236D6B0500029528 /* UITableView+Extension.swift */,
 				229A4D8E236D6E7B00029528 /* UICollectionView+Extension.swift */,
+				229A4D91236D7DA100029528 /* UIStoryboard+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -280,7 +283,7 @@
 				229A4D65236C152600029528 /* LaunchScreen.storyboard in Resources */,
 				229A4D62236C152600029528 /* Assets.xcassets in Resources */,
 				229A4D87236D697E00029528 /* LobbyTableViewCell.xib in Resources */,
-				229A4D60236C152500029528 /* Lobby.storyboard in Resources */,
+				229A4D60236C152500029528 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +389,7 @@
 				229A4D8D236D6B0500029528 /* UITableView+Extension.swift in Sources */,
 				229A4D8A236D69DC00029528 /* LobbyTableViewCell.swift in Sources */,
 				229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */,
+				229A4D92236D7DA100029528 /* UIStoryboard+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,12 +412,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		229A4D5E236C152500029528 /* Lobby.storyboard */ = {
+		229A4D5E236C152500029528 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				229A4D5F236C152500029528 /* Base */,
 			);
-			name = Lobby.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		229A4D63236C152600029528 /* LaunchScreen.storyboard */ = {
