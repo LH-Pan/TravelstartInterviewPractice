@@ -10,11 +10,15 @@
 		1D8C09D094A1D72A037D85B5 /* Pods_TravelstartInterviewPracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8DC6B00345DD6B9EF28DD4 /* Pods_TravelstartInterviewPracticeTests.framework */; };
 		229A4D59236C152500029528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D58236C152500029528 /* AppDelegate.swift */; };
 		229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5A236C152500029528 /* SceneDelegate.swift */; };
-		229A4D5D236C152500029528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5C236C152500029528 /* ViewController.swift */; };
-		229A4D60236C152500029528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229A4D5E236C152500029528 /* Main.storyboard */; };
+		229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5C236C152500029528 /* LobbyViewController.swift */; };
+		229A4D60236C152500029528 /* Lobby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229A4D5E236C152500029528 /* Lobby.storyboard */; };
 		229A4D62236C152600029528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229A4D61236C152600029528 /* Assets.xcassets */; };
 		229A4D65236C152600029528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229A4D63236C152600029528 /* LaunchScreen.storyboard */; };
 		229A4D70236C152600029528 /* TravelstartInterviewPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D6F236C152600029528 /* TravelstartInterviewPracticeTests.swift */; };
+		229A4D87236D697E00029528 /* LobbyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229A4D86236D697E00029528 /* LobbyTableViewCell.xib */; };
+		229A4D8A236D69DC00029528 /* LobbyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D89236D69DC00029528 /* LobbyTableViewCell.swift */; };
+		229A4D8D236D6B0500029528 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D8C236D6B0500029528 /* UITableView+Extension.swift */; };
+		229A4D8F236D6E7B00029528 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D8E236D6E7B00029528 /* UICollectionView+Extension.swift */; };
 		6542A1643E59C0D34D041563 /* Pods_TravelstartInterviewPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F091150183F52E27BDBAEEAC /* Pods_TravelstartInterviewPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,14 +38,18 @@
 		229A4D55236C152500029528 /* TravelstartInterviewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelstartInterviewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229A4D58236C152500029528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		229A4D5A236C152500029528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		229A4D5C236C152500029528 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		229A4D5F236C152500029528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		229A4D5C236C152500029528 /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
+		229A4D5F236C152500029528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Lobby.storyboard; sourceTree = "<group>"; };
 		229A4D61236C152600029528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		229A4D64236C152600029528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		229A4D66236C152600029528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		229A4D6B236C152600029528 /* TravelstartInterviewPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelstartInterviewPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		229A4D6F236C152600029528 /* TravelstartInterviewPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelstartInterviewPracticeTests.swift; sourceTree = "<group>"; };
 		229A4D71236C152600029528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		229A4D86236D697E00029528 /* LobbyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LobbyTableViewCell.xib; sourceTree = "<group>"; };
+		229A4D89236D69DC00029528 /* LobbyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyTableViewCell.swift; sourceTree = "<group>"; };
+		229A4D8C236D6B0500029528 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		229A4D8E236D6E7B00029528 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		2C8DC6B00345DD6B9EF28DD4 /* Pods_TravelstartInterviewPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelstartInterviewPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB5B266D354422109731D29 /* Pods-TravelstartInterviewPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartInterviewPractice.release.xcconfig"; path = "Target Support Files/Pods-TravelstartInterviewPractice/Pods-TravelstartInterviewPractice.release.xcconfig"; sourceTree = "<group>"; };
 		CBF6BA55B3181AFF80F3E657 /* Pods-TravelstartInterviewPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartInterviewPractice.debug.xcconfig"; path = "Target Support Files/Pods-TravelstartInterviewPractice/Pods-TravelstartInterviewPractice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,12 +109,13 @@
 			isa = PBXGroup;
 			children = (
 				229A4D85236D61B100029528 /* Resource */,
+				229A4D8B236D6A1F00029528 /* Extension */,
 				229A4D83236D616F00029528 /* Model */,
 				229A4D80236D60D900029528 /* Controller */,
 				229A4D84236D619A00029528 /* View */,
 				229A4D58236C152500029528 /* AppDelegate.swift */,
 				229A4D5A236C152500029528 /* SceneDelegate.swift */,
-				229A4D5E236C152500029528 /* Main.storyboard */,
+				229A4D5E236C152500029528 /* Lobby.storyboard */,
 				229A4D63236C152600029528 /* LaunchScreen.storyboard */,
 				229A4D66236C152600029528 /* Info.plist */,
 			);
@@ -125,7 +134,7 @@
 		229A4D80236D60D900029528 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				229A4D5C236C152500029528 /* ViewController.swift */,
+				229A4D5C236C152500029528 /* LobbyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,6 +150,7 @@
 		229A4D84236D619A00029528 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				229A4D88236D69B100029528 /* LobbyTableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +161,24 @@
 				229A4D61236C152600029528 /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		229A4D88236D69B100029528 /* LobbyTableView */ = {
+			isa = PBXGroup;
+			children = (
+				229A4D86236D697E00029528 /* LobbyTableViewCell.xib */,
+				229A4D89236D69DC00029528 /* LobbyTableViewCell.swift */,
+			);
+			path = LobbyTableView;
+			sourceTree = "<group>";
+		};
+		229A4D8B236D6A1F00029528 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				229A4D8C236D6B0500029528 /* UITableView+Extension.swift */,
+				229A4D8E236D6E7B00029528 /* UICollectionView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		EB573D458F956802A063358D /* Pods */ = {
@@ -251,7 +279,8 @@
 			files = (
 				229A4D65236C152600029528 /* LaunchScreen.storyboard in Resources */,
 				229A4D62236C152600029528 /* Assets.xcassets in Resources */,
-				229A4D60236C152500029528 /* Main.storyboard in Resources */,
+				229A4D87236D697E00029528 /* LobbyTableViewCell.xib in Resources */,
+				229A4D60236C152500029528 /* Lobby.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,8 +380,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				229A4D5D236C152500029528 /* ViewController.swift in Sources */,
+				229A4D8F236D6E7B00029528 /* UICollectionView+Extension.swift in Sources */,
+				229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */,
 				229A4D59236C152500029528 /* AppDelegate.swift in Sources */,
+				229A4D8D236D6B0500029528 /* UITableView+Extension.swift in Sources */,
+				229A4D8A236D69DC00029528 /* LobbyTableViewCell.swift in Sources */,
 				229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,12 +408,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		229A4D5E236C152500029528 /* Main.storyboard */ = {
+		229A4D5E236C152500029528 /* Lobby.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				229A4D5F236C152500029528 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Lobby.storyboard;
 			sourceTree = "<group>";
 		};
 		229A4D63236C152600029528 /* LaunchScreen.storyboard */ = {
@@ -523,7 +555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PersonalProject.TravelstartInterviewPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -541,7 +573,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PersonalProject.TravelstartInterviewPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
