@@ -20,6 +20,8 @@
 		229A4D8D236D6B0500029528 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D8C236D6B0500029528 /* UITableView+Extension.swift */; };
 		229A4D8F236D6E7B00029528 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D8E236D6E7B00029528 /* UICollectionView+Extension.swift */; };
 		229A4D92236D7DA100029528 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D91236D7DA100029528 /* UIStoryboard+Extension.swift */; };
+		229A4D94236DB4E100029528 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D93236DB4E100029528 /* HTTPClient.swift */; };
+		229A4D97236DBB2F00029528 /* ClientObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D96236DBB2F00029528 /* ClientObject.swift */; };
 		6542A1643E59C0D34D041563 /* Pods_TravelstartInterviewPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F091150183F52E27BDBAEEAC /* Pods_TravelstartInterviewPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		229A4D8C236D6B0500029528 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		229A4D8E236D6E7B00029528 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		229A4D91236D7DA100029528 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		229A4D93236DB4E100029528 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		229A4D96236DBB2F00029528 /* ClientObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientObject.swift; sourceTree = "<group>"; };
 		2C8DC6B00345DD6B9EF28DD4 /* Pods_TravelstartInterviewPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelstartInterviewPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB5B266D354422109731D29 /* Pods-TravelstartInterviewPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartInterviewPractice.release.xcconfig"; path = "Target Support Files/Pods-TravelstartInterviewPractice/Pods-TravelstartInterviewPractice.release.xcconfig"; sourceTree = "<group>"; };
 		CBF6BA55B3181AFF80F3E657 /* Pods-TravelstartInterviewPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartInterviewPractice.debug.xcconfig"; path = "Target Support Files/Pods-TravelstartInterviewPractice/Pods-TravelstartInterviewPractice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 		229A4D83236D616F00029528 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				229A4D95236DBA8800029528 /* HTTPS */,
+				229A4D96236DBB2F00029528 /* ClientObject.swift */,
 			);
 			name = Model;
 			path = TravelstartInterviewPractice/Model;
@@ -182,6 +188,14 @@
 				229A4D91236D7DA100029528 /* UIStoryboard+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		229A4D95236DBA8800029528 /* HTTPS */ = {
+			isa = PBXGroup;
+			children = (
+				229A4D93236DB4E100029528 /* HTTPClient.swift */,
+			);
+			path = HTTPS;
 			sourceTree = "<group>";
 		};
 		EB573D458F956802A063358D /* Pods */ = {
@@ -384,7 +398,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				229A4D8F236D6E7B00029528 /* UICollectionView+Extension.swift in Sources */,
+				229A4D97236DBB2F00029528 /* ClientObject.swift in Sources */,
 				229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */,
+				229A4D94236DB4E100029528 /* HTTPClient.swift in Sources */,
 				229A4D59236C152500029528 /* AppDelegate.swift in Sources */,
 				229A4D8D236D6B0500029528 /* UITableView+Extension.swift in Sources */,
 				229A4D8A236D69DC00029528 /* LobbyTableViewCell.swift in Sources */,
