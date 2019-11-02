@@ -100,11 +100,13 @@
 		229A4D57236C152500029528 /* TravelstartInterviewPractice */ = {
 			isa = PBXGroup;
 			children = (
+				229A4D85236D61B100029528 /* Resource */,
+				229A4D83236D616F00029528 /* Model */,
+				229A4D80236D60D900029528 /* Controller */,
+				229A4D84236D619A00029528 /* View */,
 				229A4D58236C152500029528 /* AppDelegate.swift */,
 				229A4D5A236C152500029528 /* SceneDelegate.swift */,
-				229A4D5C236C152500029528 /* ViewController.swift */,
 				229A4D5E236C152500029528 /* Main.storyboard */,
-				229A4D61236C152600029528 /* Assets.xcassets */,
 				229A4D63236C152600029528 /* LaunchScreen.storyboard */,
 				229A4D66236C152600029528 /* Info.plist */,
 			);
@@ -118,6 +120,37 @@
 				229A4D71236C152600029528 /* Info.plist */,
 			);
 			path = TravelstartInterviewPracticeTests;
+			sourceTree = "<group>";
+		};
+		229A4D80236D60D900029528 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				229A4D5C236C152500029528 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		229A4D83236D616F00029528 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = TravelstartInterviewPractice/Model;
+			sourceTree = SOURCE_ROOT;
+		};
+		229A4D84236D619A00029528 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		229A4D85236D61B100029528 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				229A4D61236C152600029528 /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		EB573D458F956802A063358D /* Pods */ = {
