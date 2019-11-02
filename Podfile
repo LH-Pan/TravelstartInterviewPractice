@@ -6,6 +6,9 @@ target 'TravelstartInterviewPractice' do
   use_frameworks!
 
   # Pods for TravelstartInterviewPractice
+  pod 'SwiftLint'
+  pod 'JonAlert', '~> 1.0'
+  pod 'Kingfisher', '~> 5.0'
 
   target 'TravelstartInterviewPracticeTests' do
     inherit! :search_paths

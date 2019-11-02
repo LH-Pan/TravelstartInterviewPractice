@@ -1,0 +1,6 @@
+framework module Pods_TravelstartInterviewPracticeTests {
+  umbrella header "Pods-TravelstartInterviewPracticeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
