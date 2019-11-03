@@ -30,13 +30,68 @@ class HTTPClient {
     
     static let shared = HTTPClient()
     
-    private let decoder = JSONDecoder()
-    
     private init() { }
     
-    func request() {
+    var offset: Int = 0
+    
+    var openDataUrl: URLComponents {
         
+        var openDataUrl = URLComponents()
+        
+        openDataUrl.scheme = "https"
+        
+        openDataUrl.host = "data.taipei"
+        
+        openDataUrl.path = "/opendata/datalist/apiAccess"
+        
+        openDataUrl.queryItems = [
+            
+            URLQueryItem(name: "scope", value: "resourceAquire"),
+            
+            URLQueryItem(name: "rid", value: "36847f3f-deff-4183-a5bb-800737591de5"),
+            
+            URLQueryItem(name: "limit", value: "10"),
+            
+            URLQueryItem(name: "offset", value: String(offset))
+        ]
+        
+        return openDataUrl
+    }
+
+    func fetchOpenData(completion: @escaping (Result<Data>) -> Void) {
+        
+        guard let url = openDataUrl.url else { return }
+        
+        URLSession.shared.dataTask(with: url) {(data, response, error) in
+            
+            guard error == nil else {
+                
+                return completion(Result.failure(error!))
+            }
+            
+            let httpResponse = response as! HTTPURLResponse
+            
+            let statusCode = httpResponse.statusCode
+            
+            switch statusCode {
+                
+            case 200..<300:
+                
+                completion(Result.success(data!))
+            
+            case 400..<500:
+                
+                completion(Result.failure(TIPHTTPClientError.clientError(data!)))
+                
+            case 500..<600:
+                
+                completion(Result.failure(TIPHTTPClientError.severError))
+            
+            default: return
+                
+                completion(Result.failure(TIPHTTPClientError.unexpectedError))
+            }
+            
+        }.resume()
     }
 }
-
-
