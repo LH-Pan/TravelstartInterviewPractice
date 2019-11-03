@@ -31,34 +31,32 @@ class HTTPClient {
     static let shared = HTTPClient()
     
     private init() { }
-    
-    var offset: Int = 0
-    
-    var openDataUrl: URLComponents {
-        
-        var openDataUrl = URLComponents()
-        
-        openDataUrl.scheme = "https"
-        
-        openDataUrl.host = "data.taipei"
-        
-        openDataUrl.path = "/opendata/datalist/apiAccess"
-        
-        openDataUrl.queryItems = [
-            
-            URLQueryItem(name: "scope", value: "resourceAquire"),
-            
-            URLQueryItem(name: "rid", value: "36847f3f-deff-4183-a5bb-800737591de5"),
-            
-            URLQueryItem(name: "limit", value: "10"),
-            
-            URLQueryItem(name: "offset", value: String(offset))
-        ]
-        
-        return openDataUrl
-    }
 
-    func fetchOpenData(completion: @escaping (Result<Data>) -> Void) {
+    func fetchOpenData(offset: Int = 0, completion: @escaping (Result<Data>) -> Void) {
+        
+        var openDataUrl: URLComponents {
+               
+               var openDataUrl = URLComponents()
+               
+               openDataUrl.scheme = "https"
+               
+               openDataUrl.host = "data.taipei"
+               
+               openDataUrl.path = "/opendata/datalist/apiAccess"
+               
+               openDataUrl.queryItems = [
+                   
+                   URLQueryItem(name: "scope", value: "resourceAquire"),
+                   
+                   URLQueryItem(name: "rid", value: "36847f3f-deff-4183-a5bb-800737591de5"),
+                   
+                   URLQueryItem(name: "limit", value: "10"),
+                   
+                   URLQueryItem(name: "offset", value: String(offset))
+               ]
+               
+               return openDataUrl
+           }
         
         guard let url = openDataUrl.url else { return }
         
@@ -69,7 +67,7 @@ class HTTPClient {
                 return completion(Result.failure(error!))
             }
             
-            let httpResponse = response as! HTTPURLResponse
+            guard let httpResponse = response as? HTTPURLResponse else { return }
             
             let statusCode = httpResponse.statusCode
             

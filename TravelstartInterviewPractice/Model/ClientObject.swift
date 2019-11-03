@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ClientResult: Codable {
+struct ClientObject: Codable {
     
     let limit: Int
     

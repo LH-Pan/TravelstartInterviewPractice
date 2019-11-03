@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D8C09D094A1D72A037D85B5 /* Pods_TravelstartInterviewPracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8DC6B00345DD6B9EF28DD4 /* Pods_TravelstartInterviewPracticeTests.framework */; };
+		2260F8E9236EC984005CD194 /* InformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F8E8236EC984005CD194 /* InformationProvider.swift */; };
+		2260F8EC236ECF96005CD194 /* TIPParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F8EB236ECF96005CD194 /* TIPParser.swift */; };
 		229A4D59236C152500029528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D58236C152500029528 /* AppDelegate.swift */; };
 		229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5A236C152500029528 /* SceneDelegate.swift */; };
 		229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5C236C152500029528 /* LobbyViewController.swift */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		0E088F7886AB3355D26A8A76 /* Pods-TravelstartInterviewPracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartInterviewPracticeTests.debug.xcconfig"; path = "Target Support Files/Pods-TravelstartInterviewPracticeTests/Pods-TravelstartInterviewPracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		216EE18458D486B4C4A2B638 /* Pods-TravelstartInterviewPracticeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartInterviewPracticeTests.release.xcconfig"; path = "Target Support Files/Pods-TravelstartInterviewPracticeTests/Pods-TravelstartInterviewPracticeTests.release.xcconfig"; sourceTree = "<group>"; };
+		2260F8E8236EC984005CD194 /* InformationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationProvider.swift; sourceTree = "<group>"; };
+		2260F8EB236ECF96005CD194 /* TIPParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIPParser.swift; sourceTree = "<group>"; };
 		229A4D55236C152500029528 /* TravelstartInterviewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelstartInterviewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229A4D58236C152500029528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		229A4D5A236C152500029528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,22 @@
 				2C8DC6B00345DD6B9EF28DD4 /* Pods_TravelstartInterviewPracticeTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2260F8E7236EC959005CD194 /* Attractions */ = {
+			isa = PBXGroup;
+			children = (
+				2260F8E8236EC984005CD194 /* InformationProvider.swift */,
+			);
+			path = Attractions;
+			sourceTree = "<group>";
+		};
+		2260F8EA236ECF82005CD194 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				2260F8EB236ECF96005CD194 /* TIPParser.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 		229A4D4C236C152500029528 = {
@@ -148,6 +168,8 @@
 		229A4D83236D616F00029528 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2260F8EA236ECF82005CD194 /* Parser */,
+				2260F8E7236EC959005CD194 /* Attractions */,
 				229A4D95236DBA8800029528 /* HTTPS */,
 				229A4D96236DBB2F00029528 /* ClientObject.swift */,
 			);
@@ -399,6 +421,7 @@
 			files = (
 				229A4D8F236D6E7B00029528 /* UICollectionView+Extension.swift in Sources */,
 				229A4D97236DBB2F00029528 /* ClientObject.swift in Sources */,
+				2260F8EC236ECF96005CD194 /* TIPParser.swift in Sources */,
 				229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */,
 				229A4D94236DB4E100029528 /* HTTPClient.swift in Sources */,
 				229A4D59236C152500029528 /* AppDelegate.swift in Sources */,
@@ -406,6 +429,7 @@
 				229A4D8A236D69DC00029528 /* LobbyTableViewCell.swift in Sources */,
 				229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */,
 				229A4D92236D7DA100029528 /* UIStoryboard+Extension.swift in Sources */,
+				2260F8E9236EC984005CD194 /* InformationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
