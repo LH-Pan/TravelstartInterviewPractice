@@ -12,10 +12,16 @@ class LobbyViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var attractionsInfoArray: [Results] = []
+    
+    let informationProvider = InformationProvider()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
+        
+        fetchData()
     }
     
     private func setupTableView() {
@@ -28,6 +34,26 @@ class LobbyViewController: UIViewController {
             identifier: LobbyTableViewCell.identifier,
             bundle: nil
         )
+    }
+    
+    func fetchData() {
+        
+        informationProvider.fetchInformation(
+            completion: { [weak self] result in
+            
+                switch result {
+                    
+                case .success(let attractionsInfoArray):
+                    
+                    self?.attractionsInfoArray = attractionsInfoArray.results
+                    
+                    print(self?.attractionsInfoArray as Any)
+                    
+                case .failure:
+                    
+                    print("讀取資料失敗")
+                }
+        })
     }
 }
 

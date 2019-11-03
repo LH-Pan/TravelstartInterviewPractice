@@ -18,7 +18,7 @@ struct ClientObject: Codable {
     
     let sort: String
     
-    let result: [Results]
+    let results: [Results]
 }
 
 struct Results: Codable {

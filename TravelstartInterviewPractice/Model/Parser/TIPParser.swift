@@ -10,7 +10,7 @@ import Foundation
 
 struct TIPSuccessParser<T: Codable>: Codable {
     
-    let data: T
+    let result: T
 }
 
 struct TIPFailureParser: Codable {

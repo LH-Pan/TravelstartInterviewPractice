@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias InfoHandler = (Result<[ClientObject]>) -> Void
+typealias InfoHandler = (Result<ClientObject>) -> Void
 
 class InformationProvider {
     
@@ -24,16 +24,20 @@ class InformationProvider {
                 switch result {
                 
                 case .success(let data):
-                    
+//                    guard let utf8Text = String(data: data, encoding: .utf8) else { return }
+//
+//                    print(utf8Text)
                     do {
-                        let response = try strongSelf.decoder.decode(TIPSuccessParser<[ClientObject]>.self, from: data)
+                        let response = try strongSelf.decoder.decode(TIPSuccessParser<ClientObject>.self, from: data)
                         
                         DispatchQueue.main.async {
                             
-                            completion(Result.success(response.data))
+                            completion(Result.success(response.result))
                         }
                         
                     } catch {
+                        
+                        print(error)
                         
                         completion(Result.failure(error))
                     }
