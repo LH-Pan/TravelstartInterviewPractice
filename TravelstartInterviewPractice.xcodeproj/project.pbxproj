@@ -10,6 +10,7 @@
 		1D8C09D094A1D72A037D85B5 /* Pods_TravelstartInterviewPracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8DC6B00345DD6B9EF28DD4 /* Pods_TravelstartInterviewPracticeTests.framework */; };
 		2260F8E9236EC984005CD194 /* InformationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F8E8236EC984005CD194 /* InformationProvider.swift */; };
 		2260F8EC236ECF96005CD194 /* TIPParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F8EB236ECF96005CD194 /* TIPParser.swift */; };
+		2260F8EF236F103F005CD194 /* JonAlertWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F8EE236F103F005CD194 /* JonAlertWrapper.swift */; };
 		229A4D59236C152500029528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D58236C152500029528 /* AppDelegate.swift */; };
 		229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5A236C152500029528 /* SceneDelegate.swift */; };
 		229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5C236C152500029528 /* LobbyViewController.swift */; };
@@ -42,6 +43,7 @@
 		216EE18458D486B4C4A2B638 /* Pods-TravelstartInterviewPracticeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartInterviewPracticeTests.release.xcconfig"; path = "Target Support Files/Pods-TravelstartInterviewPracticeTests/Pods-TravelstartInterviewPracticeTests.release.xcconfig"; sourceTree = "<group>"; };
 		2260F8E8236EC984005CD194 /* InformationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationProvider.swift; sourceTree = "<group>"; };
 		2260F8EB236ECF96005CD194 /* TIPParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIPParser.swift; sourceTree = "<group>"; };
+		2260F8EE236F103F005CD194 /* JonAlertWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JonAlertWrapper.swift; sourceTree = "<group>"; };
 		229A4D55236C152500029528 /* TravelstartInterviewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelstartInterviewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229A4D58236C152500029528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		229A4D5A236C152500029528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
+		2260F8ED236F0FC2005CD194 /* Third Party Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				2260F8EE236F103F005CD194 /* JonAlertWrapper.swift */,
+			);
+			path = "Third Party Wrapper";
+			sourceTree = "<group>";
+		};
 		229A4D4C236C152500029528 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 			children = (
 				229A4D85236D61B100029528 /* Resource */,
 				229A4D8B236D6A1F00029528 /* Extension */,
+				2260F8ED236F0FC2005CD194 /* Third Party Wrapper */,
 				229A4D83236D616F00029528 /* Model */,
 				229A4D80236D60D900029528 /* Controller */,
 				229A4D84236D619A00029528 /* View */,
@@ -423,6 +434,7 @@
 				229A4D97236DBB2F00029528 /* ClientObject.swift in Sources */,
 				2260F8EC236ECF96005CD194 /* TIPParser.swift in Sources */,
 				229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */,
+				2260F8EF236F103F005CD194 /* JonAlertWrapper.swift in Sources */,
 				229A4D94236DB4E100029528 /* HTTPClient.swift in Sources */,
 				229A4D59236C152500029528 /* AppDelegate.swift in Sources */,
 				229A4D8D236D6B0500029528 /* UITableView+Extension.swift in Sources */,
