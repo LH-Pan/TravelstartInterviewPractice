@@ -21,7 +21,7 @@ class LobbyViewController: UIViewController {
         }
     }
     
-    var networkIsConnected: Bool = true
+    var networkIsConnected: Bool = false
     
     let informationProvider = InformationProvider()
     
@@ -57,11 +57,16 @@ class LobbyViewController: UIViewController {
                 
                 self?.networkIsConnected = true
                 
+                if self?.attractionsInfoArray.count == 0 {
+                    
+                    self?.fetchData(offset: 0)
+                }
+                
             } else {
                 
                 self?.networkIsConnected = false
                 
-                TIPJonAlert.showError(message: "網路失效，請檢查網路連線")
+                TIPJonAlert.showError(message: "沒有網路，請檢查網路連線")
             }
         }
         
