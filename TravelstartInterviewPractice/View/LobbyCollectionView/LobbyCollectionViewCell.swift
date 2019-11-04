@@ -10,7 +10,7 @@ import UIKit
 
 class LobbyCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var attractionImage: UIImageView!
+    @IBOutlet weak var attractionImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

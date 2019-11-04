@@ -160,7 +160,7 @@ extension LobbyViewController: UITableViewDelegate,
             
             if urlString.hasSuffix(".jpg") || urlString.hasSuffix(".JPG") {
                 
-                filteredStringArray.append("http" + urlString)
+                filteredStringArray.append("https" + urlString)
             }
         }
         
@@ -169,6 +169,8 @@ extension LobbyViewController: UITableViewDelegate,
         cell.imageCollectionView.tag = indexPath.row
         
         setupCollectionView(collectionView: cell.imageCollectionView)
+        
+        cell.imageCollectionView.reloadData()
         
         return cell
     }
@@ -200,6 +202,7 @@ extension LobbyViewController: UICollectionViewDelegate,
         return UICollectionViewCell()
         }
         
+        cell.attractionImageView.loadImage(attractionsImageURLArray[collectionView.tag][indexPath.row])
         
         return cell
     }
