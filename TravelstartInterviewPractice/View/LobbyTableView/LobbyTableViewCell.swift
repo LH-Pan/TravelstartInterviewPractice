@@ -16,12 +16,35 @@ class LobbyTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageCollectionView: UICollectionView!
     
+    lazy var lobbyCollectionViewLayout: LobbyCollectionViewLayout = {
+        
+        let layoutObject = LobbyCollectionViewLayout()
+        
+        layoutObject.itemCount = CGFloat(attractionsImageURLArray.count)
+        
+        return layoutObject
+    }()
+    
+    var attractionsImageURLArray: [String] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        registerCollectionView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+    }
+    
+    private func registerCollectionView() {
+        
+        imageCollectionView.custom_registerCellWithNib(
+            identifier: LobbyCollectionViewCell.identifier,
+            bundle: nil
+        )
+        
+        imageCollectionView.collectionViewLayout = lobbyCollectionViewLayout
     }
 }

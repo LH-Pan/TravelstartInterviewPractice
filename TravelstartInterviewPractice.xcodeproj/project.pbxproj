@@ -14,6 +14,7 @@
 		2260F8F2236FF52E005CD194 /* LobbyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F8F1236FF52E005CD194 /* LobbyCollectionViewCell.swift */; };
 		2260F8F4236FF55C005CD194 /* LobbyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2260F8F3236FF55C005CD194 /* LobbyCollectionViewCell.xib */; };
 		2260F8F6236FFB47005CD194 /* LobbyCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F8F5236FFB47005CD194 /* LobbyCollectionViewLayout.swift */; };
+		2260F8F8236FFC1C005CD194 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F8F7236FFC1C005CD194 /* UIScreen+Extension.swift */; };
 		229A4D59236C152500029528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D58236C152500029528 /* AppDelegate.swift */; };
 		229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5A236C152500029528 /* SceneDelegate.swift */; };
 		229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5C236C152500029528 /* LobbyViewController.swift */; };
@@ -50,6 +51,7 @@
 		2260F8F1236FF52E005CD194 /* LobbyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyCollectionViewCell.swift; sourceTree = "<group>"; };
 		2260F8F3236FF55C005CD194 /* LobbyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LobbyCollectionViewCell.xib; sourceTree = "<group>"; };
 		2260F8F5236FFB47005CD194 /* LobbyCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyCollectionViewLayout.swift; sourceTree = "<group>"; };
+		2260F8F7236FFC1C005CD194 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		229A4D55236C152500029528 /* TravelstartInterviewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelstartInterviewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229A4D58236C152500029528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		229A4D5A236C152500029528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				229A4D8C236D6B0500029528 /* UITableView+Extension.swift */,
 				229A4D8E236D6E7B00029528 /* UICollectionView+Extension.swift */,
 				229A4D91236D7DA100029528 /* UIStoryboard+Extension.swift */,
+				2260F8F7236FFC1C005CD194 /* UIScreen+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				229A4D8D236D6B0500029528 /* UITableView+Extension.swift in Sources */,
 				229A4D8A236D69DC00029528 /* LobbyTableViewCell.swift in Sources */,
 				229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */,
+				2260F8F8236FFC1C005CD194 /* UIScreen+Extension.swift in Sources */,
 				2260F8F2236FF52E005CD194 /* LobbyCollectionViewCell.swift in Sources */,
 				229A4D92236D7DA100029528 /* UIStoryboard+Extension.swift in Sources */,
 				2260F8E9236EC984005CD194 /* InformationProvider.swift in Sources */,

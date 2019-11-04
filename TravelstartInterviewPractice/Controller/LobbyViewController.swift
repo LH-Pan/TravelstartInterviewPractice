@@ -54,11 +54,6 @@ class LobbyViewController: UIViewController {
         collectionView.delegate = self
         
         collectionView.dataSource = self
-        
-        collectionView.custom_registerCellWithNib(
-            identifier: LobbyCollectionViewCell.identifier,
-            bundle: nil
-        )
     }
     
     func monitorConnection() {
@@ -100,11 +95,8 @@ class LobbyViewController: UIViewController {
                         self?.attractionsInfoArray += attractionsInfoArray.results
                         
                     case .failure:
-                        
-                        DispatchQueue.main.async {
                             
-                            TIPJonAlert.showError(message: "讀取資料失敗")
-                        }
+                        TIPJonAlert.showError(message: "讀取資料失敗")
                     }
             })
         }
