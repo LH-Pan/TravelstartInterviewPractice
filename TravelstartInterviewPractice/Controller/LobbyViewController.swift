@@ -21,11 +21,15 @@ class LobbyViewController: UIViewController {
         }
     }
     
+    var attractionsImageURLArray: [String] = []
+    
     var networkIsConnected: Bool = false
     
     let informationProvider = InformationProvider()
     
     let monitor = NWPathMonitor()
+    
+    let inset: CGFloat = 16 / 375 * UIScreen.width
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +54,25 @@ class LobbyViewController: UIViewController {
     }
     
     private func setupCollectionView(collectionView: UICollectionView) {
-        
+
         collectionView.delegate = self
         
         collectionView.dataSource = self
+        
+        collectionView.custom_registerCellWithNib(
+            identifier: LobbyCollectionViewCell.identifier,
+            bundle: nil
+        )
+        
+        guard
+            let collectionViewLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        else {
+            return
+        }
+        let interItemSpacing = collectionViewLayout.minimumInteritemSpacing
+        
+        collectionViewLayout.itemSize = CGSize(width: (UIScreen.width - inset - interItemSpacing) / 2,
+                                               height: collectionView.bounds.size.height - inset * 2)
     }
     
     func monitorConnection() {
@@ -140,30 +159,30 @@ extension LobbyViewController: UITableViewDelegate,
 
 extension LobbyViewController: UICollectionViewDelegate,
                                UICollectionViewDataSource {
-    
+
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-            
-        return 1
+
+        return 3
     }
-    
+
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        
+
         guard
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: LobbyCollectionViewCell.identifier,
                 for: indexPath
             ) as? LobbyCollectionViewCell
         else {
-            
+
         return UICollectionViewCell()
         }
-        
+
         return cell
     }
 }
