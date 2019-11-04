@@ -74,7 +74,7 @@ class HTTPClient {
             switch statusCode {
                 
             case 200..<300:
-                
+                    
                 completion(Result.success(data!))
             
             case 400..<500:

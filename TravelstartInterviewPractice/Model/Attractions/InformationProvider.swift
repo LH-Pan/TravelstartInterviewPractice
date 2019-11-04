@@ -14,9 +14,10 @@ class InformationProvider {
     
     let decoder = JSONDecoder()
     
-    func fetchInformation(completion: @escaping InfoHandler) {
+    func fetchInformation(offset: Int, completion: @escaping InfoHandler) {
         
         HTTPClient.shared.fetchOpenData(
+            offset: offset,
             completion: { [weak self] result in
             
                 guard let strongSelf = self else { return }
@@ -24,9 +25,7 @@ class InformationProvider {
                 switch result {
                 
                 case .success(let data):
-//                    guard let utf8Text = String(data: data, encoding: .utf8) else { return }
-//
-//                    print(utf8Text)
+
                     do {
                         let response = try strongSelf.decoder.decode(TIPSuccessParser<ClientObject>.self, from: data)
                         
@@ -36,8 +35,6 @@ class InformationProvider {
                         }
                         
                     } catch {
-                        
-                        print(error)
                         
                         completion(Result.failure(error))
                     }

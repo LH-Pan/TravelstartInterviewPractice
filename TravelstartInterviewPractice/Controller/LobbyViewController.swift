@@ -7,21 +7,34 @@
 //
 
 import UIKit
+import Network
 
 class LobbyViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var attractionsInfoArray: [Results] = []
+    var attractionsInfoArray: [Results] = [] {
+        
+        didSet {
+            
+            tableView.reloadData()
+        }
+    }
+    
+    var networkIsConnected: Bool = true
     
     let informationProvider = InformationProvider()
+    
+    let monitor = NWPathMonitor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
         
-        fetchData()
+        monitorConnection()
+        
+        fetchData(offset: attractionsInfoArray.count)
     }
     
     private func setupTableView() {
@@ -36,24 +49,48 @@ class LobbyViewController: UIViewController {
         )
     }
     
-    func fetchData() {
+    func monitorConnection() {
         
-        informationProvider.fetchInformation(
-            completion: { [weak self] result in
+        monitor.pathUpdateHandler = { [weak self] path in
             
-                switch result {
+            if path.status == .satisfied {
+                
+                self?.networkIsConnected = true
+                
+            } else {
+                
+                self?.networkIsConnected = false
+                
+                TIPJonAlert.showError(message: "網路失效，請檢查網路連線")
+            }
+        }
+        
+        monitor.start(queue: DispatchQueue.global())
+    }
+    
+    func fetchData(offset: Int) {
+        
+        if networkIsConnected {
+            
+            informationProvider.fetchInformation(
+                offset: offset,
+                completion: { [weak self] result in
                     
-                case .success(let attractionsInfoArray):
-                    
-                    self?.attractionsInfoArray = attractionsInfoArray.results
-                    
-                    print(self?.attractionsInfoArray as Any)
-                    
-                case .failure:
-                    
-                    print("讀取資料失敗")
-                }
-        })
+                    switch result {
+                        
+                    case .success(let attractionsInfoArray):
+                        
+                        self?.attractionsInfoArray += attractionsInfoArray.results
+                        
+                    case .failure:
+                        
+                        DispatchQueue.main.async {
+                            
+                            TIPJonAlert.showError(message: "讀取資料失敗")
+                        }
+                    }
+            })
+        }
     }
 }
 
@@ -64,8 +101,8 @@ extension LobbyViewController: UITableViewDelegate,
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        
-        return 1
+
+        return attractionsInfoArray.count
     }
     
     func tableView(
@@ -81,6 +118,10 @@ extension LobbyViewController: UITableViewDelegate,
         else {
             return UITableViewCell()
         }
+        
+        cell.titleLabel.text = attractionsInfoArray[indexPath.row].stitle
+        
+        cell.descriptionLabel.text = attractionsInfoArray[indexPath.row].xbody
         
         return cell
     }
