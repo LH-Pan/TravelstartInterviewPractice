@@ -21,15 +21,13 @@ class LobbyViewController: UIViewController {
         }
     }
     
-    var attractionsImageURLArray: [String] = []
+    var attractionsImageURLArray: [[String]] = []
     
     var networkIsConnected: Bool = false
     
     let informationProvider = InformationProvider()
     
     let monitor = NWPathMonitor()
-    
-    let inset: CGFloat = 16 / 375 * UIScreen.width
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +67,9 @@ class LobbyViewController: UIViewController {
         else {
             return
         }
+        
+        let inset: CGFloat = 16 / 375 * UIScreen.width
+        
         let interItemSpacing = collectionViewLayout.minimumInteritemSpacing
         
         collectionViewLayout.itemSize = CGSize(width: (UIScreen.width - inset - interItemSpacing) / 2,
@@ -151,6 +152,22 @@ extension LobbyViewController: UITableViewDelegate,
         
         cell.descriptionLabel.text = attractionsInfoArray[indexPath.row].xbody
         
+        let urlStringArray = attractionsInfoArray[indexPath.row].file.components(separatedBy: "http")
+        
+        var filteredStringArray: [String] = []
+        
+        for urlString in urlStringArray {
+            
+            if urlString.hasSuffix(".jpg") || urlString.hasSuffix(".JPG") {
+                
+                filteredStringArray.append("http" + urlString)
+            }
+        }
+        
+        attractionsImageURLArray.append(filteredStringArray)
+        
+        cell.imageCollectionView.tag = indexPath.row
+        
         setupCollectionView(collectionView: cell.imageCollectionView)
         
         return cell
@@ -165,7 +182,7 @@ extension LobbyViewController: UICollectionViewDelegate,
         numberOfItemsInSection section: Int
     ) -> Int {
 
-        return 3
+        return attractionsImageURLArray[collectionView.tag].count
     }
 
     func collectionView(
@@ -182,7 +199,8 @@ extension LobbyViewController: UICollectionViewDelegate,
 
         return UICollectionViewCell()
         }
-
+        
+        
         return cell
     }
 }
