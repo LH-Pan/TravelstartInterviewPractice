@@ -49,6 +49,18 @@ class LobbyViewController: UIViewController {
         )
     }
     
+    private func setupCollectionView(collectionView: UICollectionView) {
+        
+        collectionView.delegate = self
+        
+        collectionView.dataSource = self
+        
+        collectionView.custom_registerCellWithNib(
+            identifier: LobbyCollectionViewCell.identifier,
+            bundle: nil
+        )
+    }
+    
     func monitorConnection() {
         
         monitor.pathUpdateHandler = { [weak self] path in
@@ -127,6 +139,38 @@ extension LobbyViewController: UITableViewDelegate,
         cell.titleLabel.text = attractionsInfoArray[indexPath.row].stitle
         
         cell.descriptionLabel.text = attractionsInfoArray[indexPath.row].xbody
+        
+        setupCollectionView(collectionView: cell.imageCollectionView)
+        
+        return cell
+    }
+}
+
+extension LobbyViewController: UICollectionViewDelegate,
+                               UICollectionViewDataSource {
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
+            
+        return 1
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        
+        guard
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: LobbyCollectionViewCell.identifier,
+                for: indexPath
+            ) as? LobbyCollectionViewCell
+        else {
+            
+        return UICollectionViewCell()
+        }
         
         return cell
     }

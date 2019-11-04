@@ -69,6 +69,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionLabel" destination="ETC-oH-bwZ" id="JLM-ve-tSH"/>
+                <outlet property="imageCollectionView" destination="lkL-4Q-xLo" id="Gdc-wp-n5K"/>
                 <outlet property="titleLabel" destination="kGV-SD-jfJ" id="oiK-fm-bfx"/>
             </connections>
             <point key="canvasLocation" x="115.94202898550725" y="228.68303571428569"/>

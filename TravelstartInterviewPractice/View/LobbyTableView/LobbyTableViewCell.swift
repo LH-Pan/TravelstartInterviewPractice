@@ -14,6 +14,8 @@ class LobbyTableViewCell: UITableViewCell {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var imageCollectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
