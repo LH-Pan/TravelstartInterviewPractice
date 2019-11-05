@@ -18,7 +18,6 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="xq1-DR-Ock" firstAttribute="leading" secondItem="Z2O-Es-bEk" secondAttribute="leading" id="3xP-02-sbu"/>
                 <constraint firstItem="Z2O-Es-bEk" firstAttribute="bottom" secondItem="xq1-DR-Ock" secondAttribute="bottom" id="FxF-hG-qOq"/>
