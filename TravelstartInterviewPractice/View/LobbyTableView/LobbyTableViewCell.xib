@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="483" id="XBJ-Gi-tkj" customClass="LobbyTableViewCell" customModule="TravelstartInterviewPractice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="483"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XBJ-Gi-tkj" id="1TX-Ba-G3t">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="483"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGV-SD-jfJ">
+                        <rect key="frame" x="16" y="32" width="96" height="22.5"/>
+                        <attributedString key="attributedText">
+                            <fragment content="新北投溫泉區">
+                                <attributes>
+                                    <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="16" name="PingFangTC-Medium"/>
+                                    <font key="NSOriginalFont" size="18" name=".AppleSystemUIFont"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETC-oH-bwZ">
+                        <rect key="frame" x="16" y="62.5" width="343" height="240.5"/>
+                        <attributedString key="attributedText">
+                            <fragment>
+                                <string key="content">北投溫泉從日據時代便有盛名，深受喜愛泡湯的日人自然不會錯過，瀧乃湯、星乃湯、鐵乃湯就是日本人依照溫泉的特性與療效給予的名稱，據說對皮膚病、神經過敏、氣喘、風濕等具有很好的療效，也因此成為了北部最著名的泡湯景點之一。新北投溫泉的泉源為大磺嘴溫泉，泉質屬硫酸鹽泉，PH值約為3~4之間，水質呈黃白色半透明，泉水溫度約為50-90℃，帶有些許的硫磺味 。目前北投的溫泉旅館、飯店、會館大部分集中於中山路、光明路沿線以及北投公園地熱谷附近，總計約有44家，每一家都各有其特色，多樣的溫泉水療以及遊憩設施，提供遊客泡湯養生，而鄰近的景點也是非常值得造訪，例如被列為三級古蹟的三寶吟松閣、星乃湯、瀧乃湯以及北投第一家溫泉旅館「天狗庵」，都有著深遠的歷史背景，而北投公園、北投溫泉博物館、北投文物館、地熱谷等，更是遊客必遊的景點，來到北投除了可以讓溫泉洗滌身心疲憊，也可以順便了解到北投溫泉豐富的人文歷史。</string>
+                                <attributes>
+                                    <color key="NSColor" red="0.43530780076980591" green="0.43528032302856445" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <font key="NSFont" size="12" name="PingFangTC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lkL-4Q-xLo">
+                        <rect key="frame" x="0.0" y="303" width="375" height="180"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="180" id="b4Y-QY-jP7"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ah0-B8-hgn">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="690-Js-3bS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="16"/>
+                        <color key="backgroundColor" red="0.96473437547683716" green="0.96467715501785278" blue="0.96470743417739868" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="RuD-H5-C1C"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lkL-4Q-xLo" firstAttribute="leading" secondItem="1TX-Ba-G3t" secondAttribute="leading" id="83V-oY-KNu"/>
+                    <constraint firstAttribute="bottom" secondItem="lkL-4Q-xLo" secondAttribute="bottom" id="RrX-uZ-9jc"/>
+                    <constraint firstItem="kGV-SD-jfJ" firstAttribute="top" secondItem="690-Js-3bS" secondAttribute="bottom" constant="16" id="Zbh-vA-8sG"/>
+                    <constraint firstItem="690-Js-3bS" firstAttribute="leading" secondItem="1TX-Ba-G3t" secondAttribute="leading" id="dE4-fj-VjE"/>
+                    <constraint firstItem="kGV-SD-jfJ" firstAttribute="leading" secondItem="1TX-Ba-G3t" secondAttribute="leading" constant="16" id="eg4-i1-0YH"/>
+                    <constraint firstAttribute="trailing" secondItem="lkL-4Q-xLo" secondAttribute="trailing" id="gvT-Vg-DhV"/>
+                    <constraint firstAttribute="trailing" secondItem="ETC-oH-bwZ" secondAttribute="trailing" constant="16" id="p8k-nm-kRg"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kGV-SD-jfJ" secondAttribute="trailing" id="p8q-80-f7W"/>
+                    <constraint firstItem="ETC-oH-bwZ" firstAttribute="top" secondItem="kGV-SD-jfJ" secondAttribute="bottom" constant="8" id="pOo-ss-wJb"/>
+                    <constraint firstItem="690-Js-3bS" firstAttribute="top" secondItem="1TX-Ba-G3t" secondAttribute="top" id="sCG-fk-iNO"/>
+                    <constraint firstAttribute="trailing" secondItem="690-Js-3bS" secondAttribute="trailing" id="sLD-xS-vue"/>
+                    <constraint firstItem="ETC-oH-bwZ" firstAttribute="leading" secondItem="1TX-Ba-G3t" secondAttribute="leading" constant="16" id="uVZ-be-ukv"/>
+                    <constraint firstItem="lkL-4Q-xLo" firstAttribute="top" secondItem="ETC-oH-bwZ" secondAttribute="bottom" id="ut2-oh-WQj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="ETC-oH-bwZ" id="JLM-ve-tSH"/>
+                <outlet property="imageCollectionView" destination="lkL-4Q-xLo" id="Gdc-wp-n5K"/>
+                <outlet property="titleLabel" destination="kGV-SD-jfJ" id="oiK-fm-bfx"/>
+            </connections>
+            <point key="canvasLocation" x="114.40000000000001" y="211.84407796101951"/>
+        </tableViewCell>
+    </objects>
+</document>

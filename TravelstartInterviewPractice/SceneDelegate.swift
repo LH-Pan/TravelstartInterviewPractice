@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
+
         guard let _ = (scene as? UIWindowScene) else { return }
     }
     //swiftlint:enable unused_optional_binding
