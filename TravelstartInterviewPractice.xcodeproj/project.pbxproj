@@ -20,6 +20,7 @@
 		2260F90423716C05005CD194 /* DetailScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2260F90323716C05005CD194 /* DetailScreen.storyboard */; };
 		2260F907237171A9005CD194 /* DetailScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F906237171A9005CD194 /* DetailScreenTableViewCell.swift */; };
 		2260F909237171CF005CD194 /* DetailScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2260F908237171CF005CD194 /* DetailScreenTableViewCell.xib */; };
+		2260F90B23717870005CD194 /* DetailScreenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F90A23717870005CD194 /* DetailScreenObject.swift */; };
 		229A4D59236C152500029528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D58236C152500029528 /* AppDelegate.swift */; };
 		229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5A236C152500029528 /* SceneDelegate.swift */; };
 		229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5C236C152500029528 /* LobbyViewController.swift */; };
@@ -62,6 +63,7 @@
 		2260F90323716C05005CD194 /* DetailScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailScreen.storyboard; sourceTree = "<group>"; };
 		2260F906237171A9005CD194 /* DetailScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenTableViewCell.swift; sourceTree = "<group>"; };
 		2260F908237171CF005CD194 /* DetailScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenTableViewCell.xib; sourceTree = "<group>"; };
+		2260F90A23717870005CD194 /* DetailScreenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenObject.swift; sourceTree = "<group>"; };
 		229A4D55236C152500029528 /* TravelstartInterviewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelstartInterviewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229A4D58236C152500029528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		229A4D5A236C152500029528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				229A4D95236DBA8800029528 /* HTTPS */,
 				229A4D96236DBB2F00029528 /* ClientObject.swift */,
 				2260F8FD23716299005CD194 /* StringSeparator.swift */,
+				2260F90A23717870005CD194 /* DetailScreenObject.swift */,
 			);
 			name = Model;
 			path = TravelstartInterviewPractice/Model;
@@ -496,6 +499,7 @@
 				229A4D8F236D6E7B00029528 /* UICollectionView+Extension.swift in Sources */,
 				229A4D97236DBB2F00029528 /* ClientObject.swift in Sources */,
 				2260F8EC236ECF96005CD194 /* TIPParser.swift in Sources */,
+				2260F90B23717870005CD194 /* DetailScreenObject.swift in Sources */,
 				229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */,
 				2260F8EF236F103F005CD194 /* JonAlertWrapper.swift in Sources */,
 				229A4D94236DB4E100029528 /* HTTPClient.swift in Sources */,

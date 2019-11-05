@@ -137,6 +137,11 @@ class LobbyViewController: UIViewController {
                         TIPJonAlert.showError(message: "讀取資料失敗")
                     }
             })
+        } else {
+            
+            tableView.es.stopLoadingMore()
+            
+            TIPJonAlert.showError(message: "沒有網路，請檢查網路連線")
         }
     }
 }
