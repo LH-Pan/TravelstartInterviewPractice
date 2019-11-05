@@ -213,7 +213,7 @@ extension LobbyViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-    cell.attractionImageView.loadImage(attractionsInfoArray[collectionView.tag].filteredStringArray[indexPath.row])
+        cell.attractionImageView.loadImage(attractionsInfoArray[collectionView.tag].filteredStringArray[indexPath.row])
         
         return cell
     }
@@ -226,7 +226,7 @@ extension LobbyViewController: UICollectionViewDelegate {
         didSelectItemAt indexPath: IndexPath
     ) {
         guard
-            let cell = collectionView.dequeueReusableCell(
+            let collectionViewCell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: LobbyCollectionViewCell.identifier,
                 for: indexPath
             ) as? LobbyCollectionViewCell
@@ -234,9 +234,13 @@ extension LobbyViewController: UICollectionViewDelegate {
             return
         }
         
-        if let detailVC = UIStoryboard.detailScreen.instantiateInitialViewController() {
-                
-            show(detailVC, sender: cell)
+        if let detailVC = UIStoryboard.detailScreen.instantiateInitialViewController() as? DetailScreenViewController {
+            
+            detailVC.detailInfoArray = attractionsInfoArray
+            
+            detailVC.index = collectionView.tag
+        
+            show(detailVC, sender: collectionViewCell)
         }
     }
 }

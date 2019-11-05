@@ -14,12 +14,16 @@ class DetailScreenViewController: UIViewController {
     
     var detailInfoArray: [Results] = []
     
-    var indexPath: IndexPath?
+    var index: Int = 0
     
     lazy var detailInfo: [DetailInfo] = {
         
-        let detailInfo = [DetailInfo(title: "景點名稱",
-                                     description: detailInfoArray[indexPath?.row ?? 0].stitle)]
+        let detailInfo = [
+            DetailInfo(title: "景點名稱", description: detailInfoArray[index].stitle),
+            DetailInfo(title: "景點介紹", description: detailInfoArray[index].xbody),
+            DetailInfo(title: "景點地址", description: detailInfoArray[index].address),
+            DetailInfo(title: "交通資訊", description: detailInfoArray[index].info ?? "無")
+        ]
         
         return detailInfo
     }()
@@ -50,7 +54,8 @@ extension DetailScreenViewController: UITableViewDelegate,
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return 1
+        
+        return detailInfo.count
     }
     
     func tableView(
@@ -66,6 +71,10 @@ extension DetailScreenViewController: UITableViewDelegate,
         else {
             return UITableViewCell()
         }
+        
+        cell.titleLabel.text = detailInfo[indexPath.row].title
+        
+        cell.descriptionLabel.text = detailInfo[indexPath.row].description
         
         return cell
     }

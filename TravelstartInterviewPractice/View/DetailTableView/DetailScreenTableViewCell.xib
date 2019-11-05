@@ -16,20 +16,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="新北投溫泉區" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIY-wq-rVi">
-                        <rect key="frame" x="16" y="46.5" width="382" height="26.5"/>
+                        <rect key="frame" x="16" y="30.5" width="382" height="42.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29D-P0-hsm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="16"/>
-                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="16" id="bCO-Jl-aG6"/>
-                        </constraints>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="景點名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="om8-fg-QV7">
-                        <rect key="frame" x="16" y="24" width="49.5" height="14.5"/>
+                        <rect key="frame" x="16" y="8" width="49.5" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.65884345769882202" green="0.65880346298217773" blue="0.65882468223571777" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
@@ -40,12 +33,9 @@
                     <constraint firstAttribute="trailing" secondItem="lIY-wq-rVi" secondAttribute="trailing" constant="16" id="13J-at-run"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="om8-fg-QV7" secondAttribute="trailing" id="27u-jP-Hbf"/>
                     <constraint firstItem="lIY-wq-rVi" firstAttribute="leading" secondItem="Lhr-zN-5bg" secondAttribute="leading" constant="16" id="Dmd-kd-tsv"/>
-                    <constraint firstAttribute="trailing" secondItem="29D-P0-hsm" secondAttribute="trailing" id="OLK-5X-EKB"/>
                     <constraint firstAttribute="bottom" secondItem="lIY-wq-rVi" secondAttribute="bottom" constant="16" id="OMI-ho-GPb"/>
-                    <constraint firstItem="29D-P0-hsm" firstAttribute="leading" secondItem="Lhr-zN-5bg" secondAttribute="leading" id="S4x-Y5-AGR"/>
                     <constraint firstItem="om8-fg-QV7" firstAttribute="leading" secondItem="Lhr-zN-5bg" secondAttribute="leading" constant="16" id="WHs-pr-bPY"/>
-                    <constraint firstItem="29D-P0-hsm" firstAttribute="top" secondItem="Lhr-zN-5bg" secondAttribute="top" id="at5-fh-wZx"/>
-                    <constraint firstItem="om8-fg-QV7" firstAttribute="top" secondItem="29D-P0-hsm" secondAttribute="bottom" constant="8" id="yZ0-2R-VBe"/>
+                    <constraint firstItem="om8-fg-QV7" firstAttribute="top" secondItem="Lhr-zN-5bg" secondAttribute="top" constant="8" id="xmV-Y2-Jue"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
