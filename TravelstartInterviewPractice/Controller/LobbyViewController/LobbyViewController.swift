@@ -39,6 +39,7 @@ class LobbyViewController: UIViewController {
     
     let monitor = NWPathMonitor()
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +50,7 @@ class LobbyViewController: UIViewController {
         addPullToLoadMore()
     }
     
+    // MARK: - Private Method
     private func setupTableView() {
         
         tableView.delegate = self
@@ -94,7 +96,7 @@ class LobbyViewController: UIViewController {
         }
     }
     
-    func monitorConnection() {
+    private func monitorConnection() {
         
         monitor.pathUpdateHandler = { [weak self] path in
             
@@ -145,7 +147,8 @@ class LobbyViewController: UIViewController {
         }
     }
 }
-
+    
+    // MARK: - Table View Delegate & DataSource
 extension LobbyViewController: UITableViewDelegate,
                                UITableViewDataSource {
     
@@ -187,7 +190,7 @@ extension LobbyViewController: UITableViewDelegate,
         return cell
     }
 }
-
+    // MARK: - Collection View DataSource
 extension LobbyViewController: UICollectionViewDataSource {
 
     func collectionView(
@@ -219,6 +222,7 @@ extension LobbyViewController: UICollectionViewDataSource {
     }
 }
 
+    // MARK: - Collection View Delegate
 extension LobbyViewController: UICollectionViewDelegate {
     
     func collectionView(

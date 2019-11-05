@@ -34,6 +34,7 @@ class DetailScreenViewController: UIViewController {
         return detailInfo
     }()
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +43,7 @@ class DetailScreenViewController: UIViewController {
         setupNavigationItem()
     }
     
+    // MARK: - Private Method
     private func setupNavigationItem() {
         
         navigationItem.title = detailInfoArray[index].stitle
@@ -99,6 +101,7 @@ class DetailScreenViewController: UIViewController {
     }
 }
 
+    // MARK: - Table View Delegate & DataSource
 extension DetailScreenViewController: UITableViewDelegate,
                                       UITableViewDataSource {
     
@@ -164,8 +167,7 @@ extension DetailScreenViewController: UITableViewDelegate,
         
         if !scrollViewIsSet {
         
-        setupScrollView(scrollView: scrollView)
-            
+            setupScrollView(scrollView: scrollView)
         }
         
         scrollViewIsSet = true
