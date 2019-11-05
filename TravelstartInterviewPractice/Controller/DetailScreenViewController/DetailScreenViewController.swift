@@ -36,6 +36,24 @@ class DetailScreenViewController: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
+        
+        setupNavigationItem()
+    }
+    
+    private func setupNavigationItem() {
+        
+        navigationItem.title = detailInfoArray[index].stitle
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage.asset(.Icons_24px_Back02),
+            style: .plain,
+            target: self,
+            action: #selector(backView)
+        )
+    }
+    
+    @objc func backView() {
+           self.navigationController?.popViewController(animated: true)
     }
     
     private func setupTableView() {

@@ -239,7 +239,7 @@ extension LobbyViewController: UICollectionViewDelegate {
             detailVC.detailInfoArray = attractionsInfoArray
             
             detailVC.index = collectionView.tag
-        
+
             show(detailVC, sender: collectionViewCell)
         }
     }
