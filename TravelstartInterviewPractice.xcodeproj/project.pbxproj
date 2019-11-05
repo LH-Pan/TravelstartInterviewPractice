@@ -248,8 +248,8 @@
 				2260F8E7236EC959005CD194 /* Attractions */,
 				229A4D95236DBA8800029528 /* HTTPS */,
 				229A4D96236DBB2F00029528 /* ClientObject.swift */,
-				2260F8FD23716299005CD194 /* StringSeparator.swift */,
 				2260F90A23717870005CD194 /* DetailScreenObject.swift */,
+				2260F8FD23716299005CD194 /* StringSeparator.swift */,
 			);
 			name = Model;
 			path = TravelstartInterviewPractice/Model;
