@@ -17,9 +17,15 @@ class LobbyViewController: UIViewController {
         
         didSet {
             
-            tableView.reloadData()
+            if oldValue.count == attractionsInfoArray.count {
+                
+                tableView.es.noticeNoMoreData()
+            } else {
             
-            tableView.es.stopLoadingMore()
+                tableView.reloadData()
+            
+                tableView.es.stopLoadingMore()
+            }
         }
     }
     
