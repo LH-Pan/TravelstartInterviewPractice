@@ -167,8 +167,7 @@ extension DetailScreenViewController: UITableViewDelegate,
         
         if !scrollViewIsSet {
         
-        setupScrollView(scrollView: scrollView)
-            
+            setupScrollView(scrollView: scrollView)
         }
         
         scrollViewIsSet = true
