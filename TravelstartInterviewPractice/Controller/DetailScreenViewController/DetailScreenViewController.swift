@@ -12,6 +12,10 @@ class DetailScreenViewController: UIViewController {
     
     @IBOutlet weak var detailTableView: UITableView!
     
+    let scrollView = UIScrollView()
+    
+    var stringIndex: CGFloat = 0
+    
     var detailInfoArray: [Results] = []
     
     var index: Int = 0
@@ -44,6 +48,34 @@ class DetailScreenViewController: UIViewController {
             identifier: DetailScreenTableViewCell.identifier,
             bundle: nil
         )
+        
+        detailTableView.custom_registerHeaderWithNib(
+            identifier: DetailScreenHeaderView.identifier,
+            bundle: nil
+        )
+    }
+    
+    private func setupScrollView(scrollView: UIScrollView) {
+        
+        scrollView.isPagingEnabled = true
+        
+        scrollView.showsHorizontalScrollIndicator = false
+        
+        for imageString in detailInfoArray[index].filteredStringArray {
+            
+            let imageView = UIImageView()
+            
+            imageView.frame = CGRect(x: scrollView.frame.width * stringIndex,
+                                     y: scrollView.frame.origin.y,
+                                     width: scrollView.frame.width,
+                                     height: scrollView.frame.height)
+            
+            stringIndex += 1
+            
+            imageView.loadImage(imageString)
+            
+            scrollView.addSubview(imageView)
+        }
     }
 }
 
@@ -64,7 +96,7 @@ extension DetailScreenViewController: UITableViewDelegate,
     ) -> UITableViewCell {
         
         guard
-            let cell = detailTableView.dequeueReusableCell(
+            let cell = tableView.dequeueReusableCell(
                 withIdentifier: DetailScreenTableViewCell.identifier,
                 for: indexPath
             ) as? DetailScreenTableViewCell
@@ -77,5 +109,43 @@ extension DetailScreenViewController: UITableViewDelegate,
         cell.descriptionLabel.text = detailInfo[indexPath.row].description
         
         return cell
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        heightForHeaderInSection section: Int
+    ) -> CGFloat {
+           
+        return 287.0 / 375 * UIScreen.width
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        viewForHeaderInSection section: Int
+    ) -> UIView? {
+        
+        guard
+            let headerView = tableView.dequeueReusableHeaderFooterView(
+                withIdentifier: DetailScreenHeaderView.identifier
+            ) as? DetailScreenHeaderView
+        else {
+            return nil
+        }
+        
+        scrollView.frame = CGRect(x: headerView.frame.origin.x,
+                                  y: headerView.frame.origin.x,
+                                  width: headerView.frame.width / 375 * UIScreen.width,
+                                  height: headerView.frame.height / 375 * UIScreen.width)
+        
+        scrollView.contentSize = CGSize(
+            width: UIScreen.width * CGFloat(detailInfoArray[index].filteredStringArray.count),
+            height: headerView.frame.height / 375 * UIScreen.width
+        )
+        
+        setupScrollView(scrollView: scrollView)
+        
+        headerView.addSubview(scrollView)
+    
+        return headerView
     }
 }

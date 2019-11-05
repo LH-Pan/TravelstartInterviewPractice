@@ -21,6 +21,8 @@
 		2260F907237171A9005CD194 /* DetailScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F906237171A9005CD194 /* DetailScreenTableViewCell.swift */; };
 		2260F909237171CF005CD194 /* DetailScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2260F908237171CF005CD194 /* DetailScreenTableViewCell.xib */; };
 		2260F90B23717870005CD194 /* DetailScreenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F90A23717870005CD194 /* DetailScreenObject.swift */; };
+		2260F91323719613005CD194 /* DetailScreenHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F91223719613005CD194 /* DetailScreenHeaderView.swift */; };
+		2260F9152371961E005CD194 /* DetailScreenHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2260F9142371961E005CD194 /* DetailScreenHeaderView.xib */; };
 		229A4D59236C152500029528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D58236C152500029528 /* AppDelegate.swift */; };
 		229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5A236C152500029528 /* SceneDelegate.swift */; };
 		229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5C236C152500029528 /* LobbyViewController.swift */; };
@@ -64,6 +66,8 @@
 		2260F906237171A9005CD194 /* DetailScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenTableViewCell.swift; sourceTree = "<group>"; };
 		2260F908237171CF005CD194 /* DetailScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenTableViewCell.xib; sourceTree = "<group>"; };
 		2260F90A23717870005CD194 /* DetailScreenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenObject.swift; sourceTree = "<group>"; };
+		2260F91223719613005CD194 /* DetailScreenHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenHeaderView.swift; sourceTree = "<group>"; };
+		2260F9142371961E005CD194 /* DetailScreenHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenHeaderView.xib; sourceTree = "<group>"; };
 		229A4D55236C152500029528 /* TravelstartInterviewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelstartInterviewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229A4D58236C152500029528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		229A4D5A236C152500029528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 			children = (
 				2260F906237171A9005CD194 /* DetailScreenTableViewCell.swift */,
 				2260F908237171CF005CD194 /* DetailScreenTableViewCell.xib */,
+				2260F91223719613005CD194 /* DetailScreenHeaderView.swift */,
+				2260F9142371961E005CD194 /* DetailScreenHeaderView.xib */,
 			);
 			path = DetailTableView;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 			files = (
 				2260F8F4236FF55C005CD194 /* LobbyCollectionViewCell.xib in Resources */,
 				2260F909237171CF005CD194 /* DetailScreenTableViewCell.xib in Resources */,
+				2260F9152371961E005CD194 /* DetailScreenHeaderView.xib in Resources */,
 				2260F90423716C05005CD194 /* DetailScreen.storyboard in Resources */,
 				229A4D65236C152600029528 /* LaunchScreen.storyboard in Resources */,
 				229A4D62236C152600029528 /* Assets.xcassets in Resources */,
@@ -513,6 +520,7 @@
 				2260F8F2236FF52E005CD194 /* LobbyCollectionViewCell.swift in Sources */,
 				229A4D92236D7DA100029528 /* UIStoryboard+Extension.swift in Sources */,
 				2260F907237171A9005CD194 /* DetailScreenTableViewCell.swift in Sources */,
+				2260F91323719613005CD194 /* DetailScreenHeaderView.swift in Sources */,
 				2260F8E9236EC984005CD194 /* InformationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

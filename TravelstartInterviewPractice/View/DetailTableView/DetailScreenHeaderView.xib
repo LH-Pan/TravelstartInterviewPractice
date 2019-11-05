@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jr1-Xo-PCx" customClass="DetailScreenHeaderView" customModule="TravelstartInterviewPractice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xq1-DR-Ock">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="xq1-DR-Ock" firstAttribute="leading" secondItem="Z2O-Es-bEk" secondAttribute="leading" id="3xP-02-sbu"/>
+                <constraint firstItem="Z2O-Es-bEk" firstAttribute="bottom" secondItem="xq1-DR-Ock" secondAttribute="bottom" id="FxF-hG-qOq"/>
+                <constraint firstItem="xq1-DR-Ock" firstAttribute="top" secondItem="Z2O-Es-bEk" secondAttribute="top" id="Pkd-1X-KLk"/>
+                <constraint firstItem="Z2O-Es-bEk" firstAttribute="trailing" secondItem="xq1-DR-Ock" secondAttribute="trailing" id="j0g-Zh-JdN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Z2O-Es-bEk"/>
+            <point key="canvasLocation" x="-116" y="-72.413793103448285"/>
+        </view>
+    </objects>
+</document>
