@@ -37,6 +37,7 @@ class InformationProvider {
                     } catch {
                         
                         completion(Result.failure(error))
+                                
                     }
                     
                 case .failure(let error):

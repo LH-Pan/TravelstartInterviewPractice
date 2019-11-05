@@ -15,6 +15,7 @@
 		2260F8F4236FF55C005CD194 /* LobbyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2260F8F3236FF55C005CD194 /* LobbyCollectionViewCell.xib */; };
 		2260F8F8236FFC1C005CD194 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F8F7236FFC1C005CD194 /* UIScreen+Extension.swift */; };
 		2260F8FA23706B0D005CD194 /* KingFisherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F8F923706B0D005CD194 /* KingFisherWrapper.swift */; };
+		2260F8FE23716299005CD194 /* StringSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260F8FD23716299005CD194 /* StringSeparator.swift */; };
 		229A4D59236C152500029528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D58236C152500029528 /* AppDelegate.swift */; };
 		229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5A236C152500029528 /* SceneDelegate.swift */; };
 		229A4D5D236C152500029528 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4D5C236C152500029528 /* LobbyViewController.swift */; };
@@ -52,6 +53,7 @@
 		2260F8F3236FF55C005CD194 /* LobbyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LobbyCollectionViewCell.xib; sourceTree = "<group>"; };
 		2260F8F7236FFC1C005CD194 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		2260F8F923706B0D005CD194 /* KingFisherWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherWrapper.swift; sourceTree = "<group>"; };
+		2260F8FD23716299005CD194 /* StringSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSeparator.swift; sourceTree = "<group>"; };
 		229A4D55236C152500029528 /* TravelstartInterviewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelstartInterviewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229A4D58236C152500029528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		229A4D5A236C152500029528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				2260F8E7236EC959005CD194 /* Attractions */,
 				229A4D95236DBA8800029528 /* HTTPS */,
 				229A4D96236DBB2F00029528 /* ClientObject.swift */,
+				2260F8FD23716299005CD194 /* StringSeparator.swift */,
 			);
 			name = Model;
 			path = TravelstartInterviewPractice/Model;
@@ -459,6 +462,7 @@
 				2260F8EF236F103F005CD194 /* JonAlertWrapper.swift in Sources */,
 				229A4D94236DB4E100029528 /* HTTPClient.swift in Sources */,
 				229A4D59236C152500029528 /* AppDelegate.swift in Sources */,
+				2260F8FE23716299005CD194 /* StringSeparator.swift in Sources */,
 				229A4D8D236D6B0500029528 /* UITableView+Extension.swift in Sources */,
 				229A4D8A236D69DC00029528 /* LobbyTableViewCell.swift in Sources */,
 				229A4D5B236C152500029528 /* SceneDelegate.swift in Sources */,

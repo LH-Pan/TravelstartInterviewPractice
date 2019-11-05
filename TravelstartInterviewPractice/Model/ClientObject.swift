@@ -23,7 +23,7 @@ struct ClientObject: Codable {
 
 struct Results: Codable {
     
-    let info: String
+    let info: String?
     
     let stitle: String
     
@@ -37,7 +37,7 @@ struct Results: Codable {
     
     let langinfo: String
     
-    let mrt: String
+    let mrt: String?
     
     let serialNo: String
     
@@ -47,7 +47,7 @@ struct Results: Codable {
     
     let cat2: String
     
-    let memoTime: String
+    let memoTime: String?
     
     let poi: String
     
@@ -64,6 +64,11 @@ struct Results: Codable {
     let avEnd: String
     
     let address: String
+    
+    var filteredStringArray: [String] {
+        
+        return StringSeparator.urlStrSeparate(string: file)
+    }
     
     enum CodingKeys: String, CodingKey {
         case refWp = "REF_WP"

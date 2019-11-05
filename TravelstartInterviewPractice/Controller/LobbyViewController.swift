@@ -18,10 +18,10 @@ class LobbyViewController: UIViewController {
         didSet {
             
             tableView.reloadData()
+            
+            tableView.es.stopLoadingMore()
         }
     }
-    
-    var attractionsImageURLArray: [[String]] = []
     
     var networkIsConnected: Bool = false
     
@@ -36,7 +36,7 @@ class LobbyViewController: UIViewController {
         
         monitorConnection()
         
-        fetchData(offset: attractionsInfoArray.count)
+        addPullToLoadMore()
     }
     
     private func setupTableView() {
@@ -74,6 +74,14 @@ class LobbyViewController: UIViewController {
         
         collectionViewLayout.itemSize = CGSize(width: (UIScreen.width - inset - interItemSpacing) / 2,
                                                height: collectionView.bounds.size.height - inset * 2)
+    }
+    
+    private func addPullToLoadMore() {
+
+        tableView.es.addInfiniteScrolling { [weak self] in
+
+            self?.fetchData(offset: self?.attractionsInfoArray.count ?? 0)
+        }
     }
     
     func monitorConnection() {
@@ -152,25 +160,14 @@ extension LobbyViewController: UITableViewDelegate,
         
         cell.descriptionLabel.text = attractionsInfoArray[indexPath.row].xbody
         
-        let urlStringArray = attractionsInfoArray[indexPath.row].file.components(separatedBy: "http")
-        
-        var filteredStringArray: [String] = []
-        
-        for urlString in urlStringArray {
-            
-            if urlString.hasSuffix(".jpg") || urlString.hasSuffix(".JPG") {
-                
-                filteredStringArray.append("https" + urlString)
-            }
-        }
-        
-        attractionsImageURLArray.append(filteredStringArray)
-        
         cell.imageCollectionView.tag = indexPath.row
         
         setupCollectionView(collectionView: cell.imageCollectionView)
         
-        cell.imageCollectionView.reloadData()
+        DispatchQueue.main.async {
+            
+            cell.imageCollectionView.reloadData()
+        }
         
         return cell
     }
@@ -183,8 +180,8 @@ extension LobbyViewController: UICollectionViewDelegate,
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-
-        return attractionsImageURLArray[collectionView.tag].count
+        
+        return attractionsInfoArray[collectionView.tag].filteredStringArray.count
     }
 
     func collectionView(
@@ -202,7 +199,7 @@ extension LobbyViewController: UICollectionViewDelegate,
         return UICollectionViewCell()
         }
         
-        cell.attractionImageView.loadImage(attractionsImageURLArray[collectionView.tag][indexPath.row])
+    cell.attractionImageView.loadImage(attractionsInfoArray[collectionView.tag].filteredStringArray[indexPath.row])
         
         return cell
     }

@@ -9,6 +9,7 @@ target 'TravelstartInterviewPractice' do
   pod 'SwiftLint'
   pod 'JonAlert', '~> 1.0'
   pod 'Kingfisher'
+  pod "ESPullToRefresh"
 
   target 'TravelstartInterviewPracticeTests' do
     inherit! :search_paths
