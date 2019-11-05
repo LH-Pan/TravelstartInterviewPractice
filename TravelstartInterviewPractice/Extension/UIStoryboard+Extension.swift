@@ -10,12 +10,16 @@ import UIKit
 
 struct StoryboardCategory {
     
-    static let lobby = "Lobby"
+    static let main = "Main"
+    
+    static let detailScreen = "DetailScreen"
 }
 
 extension UIStoryboard {
     
-    static var lobby: UIStoryboard { return setStoryboard(name: StoryboardCategory.lobby) }
+    static var main: UIStoryboard { return setStoryboard(name: StoryboardCategory.main) }
+    
+    static var detailScreen: UIStoryboard { return setStoryboard(name: StoryboardCategory.detailScreen) }
     
     private static func setStoryboard(name: String) -> UIStoryboard {
         

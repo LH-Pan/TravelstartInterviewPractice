@@ -20,11 +20,15 @@ class LobbyViewController: UIViewController {
             if oldValue.count == attractionsInfoArray.count {
                 
                 tableView.es.noticeNoMoreData()
+                
             } else {
-            
-                tableView.reloadData()
-            
-                tableView.es.stopLoadingMore()
+                
+                DispatchQueue.main.async { [weak self] in
+                    
+                    self?.tableView.reloadData()
+                    
+                    self?.tableView.es.stopLoadingMore()
+                }
             }
         }
     }
@@ -179,8 +183,7 @@ extension LobbyViewController: UITableViewDelegate,
     }
 }
 
-extension LobbyViewController: UICollectionViewDelegate,
-                               UICollectionViewDataSource {
+extension LobbyViewController: UICollectionViewDataSource {
 
     func collectionView(
         _ collectionView: UICollectionView,
@@ -202,11 +205,33 @@ extension LobbyViewController: UICollectionViewDelegate,
             ) as? LobbyCollectionViewCell
         else {
 
-        return UICollectionViewCell()
+            return UICollectionViewCell()
         }
         
     cell.attractionImageView.loadImage(attractionsInfoArray[collectionView.tag].filteredStringArray[indexPath.row])
         
         return cell
+    }
+}
+
+extension LobbyViewController: UICollectionViewDelegate {
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+        guard
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: LobbyCollectionViewCell.identifier,
+                for: indexPath
+            ) as? LobbyCollectionViewCell
+        else {
+            return
+        }
+        
+        if let detailVC = UIStoryboard.detailScreen.instantiateInitialViewController() {
+                
+            show(detailVC, sender: cell)
+        }
     }
 }
