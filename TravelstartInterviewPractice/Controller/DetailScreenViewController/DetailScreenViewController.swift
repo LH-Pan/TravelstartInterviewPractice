@@ -18,6 +18,8 @@ class DetailScreenViewController: UIViewController {
     
     var detailInfoArray: [Results] = []
     
+    var scrollViewIsSet: Bool = false
+    
     var index: Int = 0
     
     lazy var detailInfo: [DetailInfo] = {
@@ -134,7 +136,7 @@ extension DetailScreenViewController: UITableViewDelegate,
         heightForHeaderInSection section: Int
     ) -> CGFloat {
            
-        return 287.0 / 375 * UIScreen.width
+        return 303.0 / 375 * UIScreen.width
     }
     
     func tableView(
@@ -151,7 +153,7 @@ extension DetailScreenViewController: UITableViewDelegate,
         }
         
         scrollView.frame = CGRect(x: headerView.frame.origin.x,
-                                  y: headerView.frame.origin.x,
+                                  y: headerView.frame.origin.y,
                                   width: headerView.frame.width / 375 * UIScreen.width,
                                   height: headerView.frame.height / 375 * UIScreen.width)
         
@@ -160,7 +162,13 @@ extension DetailScreenViewController: UITableViewDelegate,
             height: headerView.frame.height / 375 * UIScreen.width
         )
         
+        if !scrollViewIsSet {
+        
         setupScrollView(scrollView: scrollView)
+            
+        }
+        
+        scrollViewIsSet = true
         
         headerView.addSubview(scrollView)
     

@@ -58,7 +58,7 @@
                     </collectionView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="690-Js-3bS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="16"/>
-                        <color key="backgroundColor" red="0.92152029275894165" green="0.92160207033157349" blue="0.92145198583602905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96473437547683716" green="0.96467715501785278" blue="0.96470743417739868" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="RuD-H5-C1C"/>
                         </constraints>
